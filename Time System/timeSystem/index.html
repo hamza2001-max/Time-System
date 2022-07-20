@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/f34a5d3160.js" crossorigin="anonymous"></script>
+    <script defer src="./app.js"></script>
+    <link rel="stylesheet" href="./style.css">
+    <title>Time</title>
+</head>
+
+<body>
+    <section class="mainContainer">
+        <div class="worldClock">
+            <h2>World Clock</h2>
+            <div class="worldTime">
+            </div>
+        </div>
+        <div class="stopWatch">
+            <h2 class="text">Stop Watch</h2>
+            <h1 class="time">00 : 00 : 00</h1>
+            <div class="action">
+                <div class="playContainer">
+                    <i class="fa-solid fa-play"></i>
+                </div>
+                <div class="resetContainer">
+                    <i class="fa-solid fa-arrow-rotate-right"></i>
+                </div>
+            </div>
+        </div>
+        <div class="theme">
+            <div class="themeContainer">
+                <div class="text">
+                    <h2>Themes</h2>
+                </div>
+                <div class="toggleButton">
+                    <input type="checkbox" class="checkbox" id="checkbox">
+                    <label for="checkbox" class="label">
+                        <i class="fas fa-moon"></i>
+                        <i class="fas fa-sun"></i>
+                        <div class="ball"></div>
+                    </label>
+                </div>
+            </div>
+            <div class="modesContainer">
+                <div class="lightMode">
+                    <h2>Light Mode</h2>
+                    <i class="fa-solid fa-sun"></i>
+                </div>
+                <div class="darkMode">
+                    <h2>Dark Mode</h2>
+                    <i class="fa-solid fa-moon"></i>
+                </div>
+            </div>
+        </div>
+        <div class="alarm">
+            <div class="intro">
+                <h2>Alarm</h2>
+                <div id="container">
+                    <div id="element"></div>
+                </div>
+
+                <!-- <div class="toggleButton">
+                    <input type="checkbox" class="checkbox" id="checkbox1Z">
+                    <label for="checkbox1" class="label">
+                        <h3>ON</h3>
+                        <h3>OFF</h3>
+                        <div class="ball"></div>
+                    </label> -->
+            </div>
+            <div class="alarm-container">
+            </div>
+            <div class="container">
+                <div id="add-alarm-container">
+                    <input type="text" placeholder="Enter Alarm" id="input-alarm">
+                    <button id="add-alarm"><i class="fa-solid fa-plus"></i></button>
+                </div>
+                <!-- <div id="alarm-container"></div> -->
+            </div>
+        </div>
+    </section>
+</body>
+
+</html>

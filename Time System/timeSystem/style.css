@@ -1,0 +1,231 @@
+@import url("https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap");
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "lato", "Times New Roman", Times, serif;
+  background-color: rgb(211, 232, 243);
+  height: 100vh;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+body.dark {
+  background-color: rgb(47, 67, 99);
+}
+body.dark .worldClock {
+  background-color: rgb(51, 88, 131);
+  box-shadow: 7px 7px 2px rgb(36, 51, 75);
+  color: #fff;
+}
+body.dark .stopWatch {
+  background-color: rgb(51, 88, 131);
+  box-shadow: 7px 7px 2px rgb(36, 51, 75);
+  color: #fff;
+}
+body.dark .theme {
+  background-color: rgb(51, 88, 131);
+  box-shadow: 7px 7px 2px rgb(36, 51, 75);
+  color: #fff;
+}
+body.dark .alarm {
+  background-color: rgb(51, 88, 131);
+  box-shadow: 7px 7px 2px rgb(36, 51, 75);
+  color: #fff;
+}
+
+.mainContainer {
+  width: 750px;
+  font-weight: 400;
+  height: 600px;
+  color: rgb(100, 161, 217);
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+  gap: 15px;
+}
+.mainContainer .worldClock {
+  background-color: #fff;
+  grid-column: span 3;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding: 15px;
+  border-radius: 12px;
+  box-shadow: 7px 7px 2px rgb(159, 174, 183);
+  position: relative;
+}
+.mainContainer .worldClock h2 {
+  position: absolute;
+  padding: 20px;
+  top: 0;
+  left: 0;
+}
+.mainContainer .worldClock .worldTime {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  width: 420px;
+  font-size: 2rem;
+}
+.mainContainer .worldClock .worldTime h1 {
+  font-weight: 400;
+}
+.mainContainer .worldClock .worldTime span {
+  font-size: 1.3rem;
+}
+.mainContainer .stopWatch {
+  background-color: #fff;
+  box-shadow: 7px 7px 2px rgb(159, 174, 183);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  grid-row: 2;
+  border-radius: 12px;
+  position: relative;
+}
+.mainContainer .stopWatch .text {
+  padding: 15px;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+.mainContainer .stopWatch .time {
+  margin-top: 25px;
+  font-size: 2rem;
+  margin-bottom: 17px;
+  font-weight: 400;
+}
+.mainContainer .stopWatch .action {
+  width: 105px;
+  display: flex;
+  justify-content: space-between;
+}
+.mainContainer .stopWatch .action div {
+  background-color: rgb(211, 232, 243);
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+.mainContainer .stopWatch .action div i {
+  color: rgb(68, 132, 191);
+  font-size: 1.5rem;
+}
+.mainContainer .theme {
+  background-color: #fff;
+  box-shadow: 7px 7px 2px rgb(159, 174, 183);
+  border-radius: 12px;
+  grid-row: 3;
+  padding: 15px;
+}
+.mainContainer .theme .themeContainer {
+  margin-bottom: 18px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  justify-content: space-between;
+}
+.mainContainer .theme .themeContainer .toggleButton {
+  display: flex;
+  flex-direction: column;
+}
+.mainContainer .theme .themeContainer .toggleButton .checkbox {
+  position: absolute;
+  opacity: 0;
+}
+.mainContainer .theme .themeContainer .toggleButton .checkbox:checked + .label .ball {
+  transform: translateX(24px);
+}
+.mainContainer .theme .themeContainer .toggleButton .label {
+  background-color: rgb(68, 132, 191);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 3.5px;
+  width: 50px;
+  height: 25px;
+  border-radius: 30px;
+  position: relative;
+}
+.mainContainer .theme .themeContainer .toggleButton .label i {
+  color: #fff;
+}
+.mainContainer .theme .themeContainer .toggleButton .label .ball {
+  position: absolute;
+  border-radius: 50px;
+  height: 20px;
+  width: 20px;
+  background-color: #fff;
+  transition: transform 250ms linear;
+}
+.mainContainer .theme .modesContainer div {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 29px;
+}
+.mainContainer .theme .modesContainer div h2 {
+  font-weight: 400;
+}
+.mainContainer .theme .modesContainer div i {
+  font-size: 2rem;
+}
+.mainContainer .alarm {
+  background-color: #fff;
+  box-shadow: 7px 7px 2px rgb(159, 174, 183);
+  grid-column: span 2;
+  grid-row: span 2;
+  border-radius: 12px;
+  padding: 15px;
+  position: relative;
+}
+.mainContainer .alarm .intro {
+  width: 465px;
+  padding-bottom: 15px;
+}
+.mainContainer .alarm .intro h2 {
+  border-bottom: 1px solid;
+  padding-bottom: 17px;
+}
+.mainContainer .alarm .container {
+  padding: 15px;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+}
+.mainContainer .alarm .container #add-alarm-container {
+  display: flex;
+  align-items: center;
+}
+.mainContainer .alarm .container #add-alarm-container #input-alarm {
+  width: 80px;
+  border-radius: 50px;
+  border: none;
+  height: 20px;
+  padding-left: 7px;
+  color: #fff;
+  background-color: rgb(68, 132, 191);
+}
+.mainContainer .alarm .container #add-alarm-container button {
+  cursor: pointer;
+  border-radius: 50px;
+  height: 70px;
+  width: 70px;
+  border: none;
+  background: transparent;
+  color: rgb(100, 161, 217);
+}
+.mainContainer .alarm .container #add-alarm-container button i {
+  font-size: 4rem;
+}/*# sourceMappingURL=style.css.map */

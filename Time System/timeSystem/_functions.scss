@@ -1,0 +1,6 @@
+@mixin centering($flex-di) {
+    display: flex;
+    flex-direction: $flex-di;
+    justify-content: center;
+    align-items: center;
+}
